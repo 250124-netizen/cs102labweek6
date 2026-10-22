@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+char cellAt(int row, int col) {
+    return ((row + col) % 2 == 0) ? '#' : '.';
+}
+
+int main() {
+    int rows, cols;
+    cin >> rows >> cols;
+
+    for (int r = 0; r < rows; r++) {
+        for (int c = 0; c < cols; c++) {
+            cout << cellAt(r, c);
+        }
+        cout << endl;
+    }
+    return 0;
+}
